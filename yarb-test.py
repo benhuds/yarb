@@ -11,24 +11,19 @@ if __name__ == "__main__":
         words = f.readlines()
     words = [x.strip() for x in words]
 
-    start = time.time()
-    bf.bulk_insert(words)
-    end = time.time()
-    print "Bulk insert successful. Duration:", end - start
+#    start = time.time()
+#    bf.bulk_insert(words)
+#    end = time.time()
+#    print "Bulk insert successful. Duration:", end - start
 
-    start2 = time.time()
-    for w in words:
-        bf.insert(w)
-    end2 = time.time()
-    print "Inefficient insert successful. Duration:", end2 - start2
+#    start2 = time.time()
+#    for w in words:
+#        bf.insert(w)
+#    end2 = time.time()
+#    print "Inefficient insert successful. Duration:", end2 - start2
 
-    print "Bloom filter total size:", bf.m
-    print "Hash derivations:", bf.k
-    print "Occupied offsets after bulk insert:", bf.size()
 
-# Test run 1:
-# Bulk insert successful. Duration: 9.5189268589
-# Inefficient insert successful. Duration: 21.5237748623
+    print "Capacity after insert:", str((float(bf.size()) / bf.m) * 100)+"%"
 
 #    print "contains aardvark:", bf.contains('aardvark')
 #    print "contains zebra:", bf.contains('zebra')

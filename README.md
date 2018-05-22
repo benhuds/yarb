@@ -6,7 +6,7 @@ comes with a bulk insert function to pipeline multiple inserts to the server.
 Inspired by a [similar
 implementation](https://github.com/xupeng/bloomfilter-redis).
 
-### Benchmarking insert functions
+### Benchmarking inserts
 
 Inserting 109,582 words from a file of English words (`wordsEn.txt`) into a
 1,000,000-bit Bloom filter with 3 hash derivations:
