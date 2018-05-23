@@ -8,11 +8,20 @@ implementation](https://github.com/xupeng/bloomfilter-redis).
 
 ### Benchmarking inserts
 
-Inserting 109,582 words from a file of English words (`wordsEn.txt`) into a
+Inserting [109,582 English
+words](https://github.com/benhuds/yarb/blob/master/wordsEn.txt) into a
 1,000,000-bit Bloom filter with 3 hash derivations:
 
 ```
-Using plain insert: 21.5324678421
-Using bulk insert: 9.7206568718
+Using serial insert: 21.5324678421s
+Using bulk insert: 9.7206568718s
+```
+
+Inserting [10,000,000 bad
+passwords](https://github.com/danielmiessler/SecLists/tree/master/Passwords)
+into a 1,000,000,000-bit Bloom filter with 3 hash derivations:
+
+```
+Using bulk insert: 95.7611479759s
 ```
 
