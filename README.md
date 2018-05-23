@@ -1,10 +1,10 @@
 # yarb: Yet Another Redis-backed Bloom filter
 
-Simple Redis-backed Bloom filter in Python.  Implements FNV1 and FNV1a for
-hashing (see [here](http://www.isthe.com/chongo/tech/comp/fnv/index.html)), and
+Simple Redis-backed Bloom filter in Python.  Inspired by a [similar
+implementation](https://github.com/xupeng/bloomfilter-redis). Implements FNV1
+and FNV1a for hashing (see
+[here](http://www.isthe.com/chongo/tech/comp/fnv/index.html)), and also
 comes with a bulk insert function to pipeline multiple inserts to the server.
-Inspired by a [similar
-implementation](https://github.com/xupeng/bloomfilter-redis).
 
 ### Benchmarking inserts
 
