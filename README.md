@@ -17,7 +17,7 @@ Using serial insert: 21.5324678421s
 Using bulk insert: 9.7206568718s
 ```
 
-Inserting [10,000,000 bad
+Inserting [1,000,000 bad
 passwords](https://github.com/danielmiessler/SecLists/tree/master/Passwords)
 into a 1,000,000,000-bit Bloom filter with 3 hash derivations:
 
