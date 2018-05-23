@@ -6,6 +6,27 @@ and FNV1a for hashing (see
 [here](http://www.isthe.com/chongo/tech/comp/fnv/index.html)), and also
 comes with a bulk insert function to pipeline multiple inserts to the server.
 
+### Usage
+
+If you're running `redis-server` locally, you can try something like
+
+``` python
+import redis
+from yarb import BloomFilter
+
+r = redis.StrictRedis(host='localhost', port=6379, db=0)
+
+# Filter is set to 1000000 bits with 3 hash derivations but feel free to experiment
+bf = BloomFilter(r, 'filter-name-here', 1000000, 3)
+
+bf.insert('foo')
+bf.insert('bar')
+bf.insert('baz')
+
+bf.contains('bar')
+bf.contains('qux')
+```
+
 ### Benchmarking inserts
 
 Inserting [109,582 English
