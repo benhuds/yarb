@@ -8,6 +8,9 @@ comes with a bulk insert function to pipeline multiple inserts to the server.
 
 ### Usage
 
+Prerequisites: [redis](https://redis.io/download) and
+[redis-py](https://github.com/andymccurdy/redis-py) (the Redis Python client)
+
 If you're running `redis-server` locally, you can try something like
 
 ``` python
